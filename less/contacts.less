@@ -1,0 +1,289 @@
+/* ============== Контакты ============== */ 
+
+.contacts-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #dadada;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.contacts-desc {
+	flex-shrink: 0;
+	width: 250px;
+}
+
+.contacts-title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1;
+	color: #24407e;
+}
+
+.contacts-text {
+	display: block;
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.contacts-text-big {
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.contacts-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts-place {
+	width: 410px;
+	text-align: center;
+}
+
+.contacts-map {
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+.contacts-place-text {
+	margin: 0;
+	margin-right: 30px;
+	font-weight: 700;
+	font-size: 12px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.requisite-box {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.contacts-button {
+	display: inline-block;
+	content: '';
+	width: 30px;
+	height: 30px;
+}
+
+.contacts-button-wt {
+	background: url("../img/social-icon-wtsp.png") no-repeat;
+}
+
+.contacts-button-tg {
+	background: url("../img/socail-icon-tg.png") no-repeat;
+}
+
+.contact {
+	padding: 45px 0;
+	border-top: 1px solid #ededed;
+}
+
+.contact-form .container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+
+.form-left {
+	width: 448px;
+}
+
+.form-right {
+	width: 705px;
+}
+
+.form-input {
+	display: block;
+	width: 100%;
+	height: 51px;
+	margin-bottom: 10px;
+	padding: 21px 25px;
+	font-size: 12px;
+	border: 2px solid #dee3e6;
+	border-radius: 4px;
+	box-sizing: border-box;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contact-form textarea.form-input {
+	height: 100%;
+}
+
+.contact-form #agreement {
+	display: none;
+}
+
+.contact-form .checkbox {
+	position: relative;
+	padding-top: 25px;
+	padding-left: 40px;
+	font-size: 11px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		content: '';
+		display: block;
+		width: 23px;
+		height: 24px;
+		border-radius: 4px;
+		border: 2px solid #dee3e6;
+		box-sizing: border-box;
+	}
+}
+
+#agreement:checked ~ .checkbox::after {
+	position: absolute;
+	left: 2px;
+	top: 22px;
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/check-icon.png) no-repeat;	
+}
+
+.btn-form {
+	width: 280px;
+	height: 64px;
+	border: 2px solid #dee3e6;
+}
+
+/* ============== Контакты Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+
+	.contacts-desc {
+		width: 150px;
+	}
+
+	.contacts-title {
+		margin-bottom: 10px;
+		font-size: 8px;
+	}
+
+	.contacts-text {
+		font-size: 8px;
+	}
+
+	.contacts-text-big {
+		margin-bottom: 10px;
+		font-size: 8px;
+	}
+
+	.contacts-place {
+		width: 245px;
+	}
+
+	.contacts-place-text {
+		font-size: 7px;
+	}
+
+	.form-left {
+		width: 265px;
+	}
+
+	.form-right {
+		width: 418px;
+	}
+
+	.form-input {
+		padding: 13px 18px;
+		font-size: 8px;
+	}
+
+	.btn-form {
+		width: 203px;
+		height: 46px;
+	}
+
+}
+
+
+/* ============== Контакты Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+
+	.contact {
+		padding: 25px 0;
+	}
+
+	.contacts-section {
+		flex-direction: column;
+	}
+
+	.contacts-desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		width: 90%;
+		height: 90px;
+		margin-bottom: 20px;
+	}
+
+	.contacts-button {
+		width: 18px;
+		height: 18px;
+		background-size: 18px 18px;
+	}
+
+	.requisite-box {
+		flex-wrap: wrap;
+
+		div {
+			margin-right: 30px;
+		}
+	}
+
+	.contact-form .container {
+		flex-direction: column;
+	}
+
+	.form-left,
+	.form-right {
+		width: 100%;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.contact-form .checkbox {
+		display: block;
+		margin-bottom: 20px;
+		padding-top: 0;
+		font-size: 6px;
+	}
+
+	.btn-form {
+		width: 160px;
+		height: 36px;
+		margin: 0 auto;
+		padding: 15px;
+	}
+
+	#agreement:checked ~ .checkbox::after {
+		top: 3px;
+	}
+
+}

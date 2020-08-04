@@ -1,0 +1,202 @@
+/* ============== Карточка товара ============== */
+.product-main {
+	display: flex;
+}
+
+.product-gallery {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 370px;
+	padding: 20px;
+	border: 1px solid #ededed;
+	box-sizing: border-box;
+
+	img {
+		width: 47px;
+		height: 73px;
+		
+	}
+
+}
+
+.product-gallery .product-image-main {
+	width: 100%;
+	margin-bottom: 25px;
+	text-align: center;
+	border-bottom: 1px solid #e8e8e8;
+
+	img {
+		width: 121px;
+		height: 189px;
+		margin-right: 0;
+	}
+}
+
+.product-content {
+	width: 400px;
+	padding: 50px;
+	background: #f5f7f8;
+	box-sizing: border-box;
+}
+
+.product-status {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.product-norm {
+	margin: 0;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+	color: #6a6b6b;
+}
+
+.product-presence {
+	margin: 0;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;	
+	color: #009c44;
+}
+
+.product-desc {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.product-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.product-amount button {
+	width: 26px;
+	height: 24px;
+	font-family: @second-font;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1;
+	color: #bfbfbf;
+	background: #fff;
+	border: 1px solid #dad9d9;
+	border-radius: 5px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.product-amount .amount-inc {
+	margin-left: 5px;
+}
+
+.product-amount .amount-dec {
+	margin-right: 5px;
+}
+
+.product-number {
+	font-family: @second-font;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.product-sum {
+	margin: 0;
+	font-weight: 600;
+	font-size: 23px;
+	line-height: 1;
+}
+
+/* ============== Карточка товара Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+
+	.product-gallery {
+		width: 226px;
+
+		img {
+			width: 34px;
+			height: 52px;
+		}
+
+		>img:last-child {
+			display: none;
+		}
+	}
+
+	.product-gallery .product-image-main {
+		margin-bottom: 20px;
+
+		img {
+			width: 87px;
+			height: 136px;
+		}
+	}
+
+	.product-content {
+		width: 240px;
+		padding: 20px;
+	}
+
+	.product-status {
+		margin-bottom: 20px;
+	}
+
+	.product-norm,
+	.product-presence {
+		font-size: 9px;
+	}
+
+	.product-desc {
+		font-size: 8px;
+		line-height: 1.5;
+	}
+
+	.product-amount button {
+		width: 22px;
+		height: 21px;
+		font-size: 12px;
+	}
+
+	.product-number {
+		font-size: 8px;
+	}
+
+	.product-sum {
+		font-size: 17px;
+	}
+
+}
+
+
+/* ============== Карточка товара Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+
+	.product-main {
+		flex-direction: column;
+	}
+
+	.product-gallery {
+		width: 100%;
+
+		>img:last-child {
+			display: block;
+		}		
+	}
+
+	.product-content {
+		width: 100%;
+	}
+
+
+}

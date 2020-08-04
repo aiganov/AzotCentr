@@ -1,0 +1,220 @@
+/* ============== Оформление ============== */ 
+
+.registration-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.registration-left {
+	width: 447px;
+}
+
+.registration-title {
+	margin: 0;
+	margin-bottom: 40px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.field-box {
+	display: flex;
+
+	input {
+		width: 220px;
+	}
+
+	input:first-child {
+		margin-right: 10px;
+	}
+}
+
+.registration-container textarea {
+	height: 118px;
+}
+
+
+.registration-right {
+	width: 290px;
+}
+
+.registration-delivery,
+.registration-payment {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+
+	input {
+		display: none;
+	}
+
+	label {
+		position: relative;
+		margin-bottom: 15px;
+		padding-left: 40px;
+		font-size: 14px;
+	}
+
+	label::before {
+		position: absolute;
+		left: 0;
+		content: '';
+		display: block;
+		width: 23px;
+		height: 24px;
+		border-radius: 4px;
+		border: 2px solid #dee3e6;
+		box-sizing: border-box;
+	}
+
+	input:checked + label::after {
+	position: absolute;
+	left: 2px;
+	top: 3px;
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/check-icon.png) no-repeat;	
+	}	
+
+}
+
+.registration-total {
+	display: flex;
+
+	.registration-title {
+		margin-bottom: 5px;
+		margin-right: 25px;
+	}
+
+	.registration-sum {
+		font-weight: 700;
+		font-size: 24px;
+	}
+
+	.ruble-sum {
+		font-weight: 700;
+	}
+}
+
+.btn-registration {
+	width: 218px;
+	height: 64px;
+	border: 2px solid #dee3e6;
+}
+
+/* ============== Оформление Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+
+	.registration-container {
+		margin-bottom: 20px;
+	}
+
+	.registration-left {
+		width: 261px;
+	}
+
+	.registration-title {
+		margin-bottom: 25px;
+		font-size: 11px;
+	}
+
+	.registration-right {
+		width: 170px;
+	}
+
+	.registration-form .form-input {
+		height: 33px;
+	}
+
+	.field-box input {
+		width: 125px;
+	}
+
+	.registration-form textarea.form-input {
+		height: 78px;
+	}
+
+	.registration-delivery label, 
+	.registration-payment label {
+		font-size: 8px;
+	}
+
+	.registration-total {
+		justify-content: space-between;
+	}
+
+	.registration-total .registration-sum {
+		font-size: 15px;
+	}
+
+	.btn-registration {
+		width: 144px;
+		height: 42px;
+		padding: 15px;
+	}
+
+}
+
+/* ============== Контакты Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+	
+	.registration-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.registration-left {
+		width: 100%;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+
+	.registration-title {
+		text-align: center;
+	}
+
+	.field-box input {
+		width: 150px;
+	}
+
+	.registration-right {
+		width: 100%;
+	}
+
+	.registration-delivery, 
+	.registration-payment {
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+		padding-left: 20px;
+	}
+
+	.registration-delivery {
+		height: 100px;
+	}
+
+	.registration-payment {
+		height: 50px;
+		margin-bottom: 0;
+	}
+
+	.registration-total {
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	.registration-total .registration-title {
+		margin-right: 0;
+	}
+
+	.btn-registration {
+		width: 260px;
+		margin: 0 auto;
+	}
+
+}

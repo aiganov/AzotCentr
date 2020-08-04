@@ -1,0 +1,169 @@
+/* ============== Корзина ============== */ 
+
+.basket-table {
+	width: 100%;
+	margin-bottom: 40px;
+	border-collapse: collapse;
+
+	tr {
+		border-bottom: 1px solid #ebebeb;
+	}
+	
+	th {
+		padding: 20px 0;
+		font-weight: 700;
+		font-size: 14px;
+		color: #24407e;
+		text-align: left;
+	}
+
+	td {
+		padding: 15px 0 20px 0;
+	}
+
+	td:first-child {
+		width: 360px;
+	}
+
+	td:nth-child(2) {
+		width: 244px;
+	}
+}
+
+.table-item-desc {
+	display: flex;
+	align-items: center;
+
+	img {
+		display: block;
+		width: 93px;
+		height: 90px;
+		margin-right: 35px;
+		border: 1px solid #f0f0f0;
+		box-sizing: border-box;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		opacity: 0.8;
+	}
+
+	.table-item-title {
+		margin: 0;
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1;
+		color: #161616;
+		text-transform: uppercase;
+	}
+
+	.table-item-norm {
+		margin: 0;
+		font-weight: 600;
+		font-size: 12px;
+		color: #6e6e6e;
+	}
+}
+
+.table-item-price {
+	margin: 0;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.basket-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* ============== Корзина Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+
+	.basket-table {
+		margin-bottom: 30px;
+
+		th {
+			padding: 10px 0;
+			font-size: 9px;
+		}
+
+		td {
+			padding: 10px 0 13px 0;
+		}
+
+		td:first-child {
+			width: 232px;
+		}
+
+		td:nth-child(2) {
+			width: 109px;
+		}
+	}
+
+	.table-item-desc {
+
+		img {
+			width: 59px;
+			height: 58px;	
+			margin-right: 20px;
+		}
+
+		.table-item-title {
+			margin-bottom: 5px;
+			font-size: 9px;
+		}
+
+		.table-item-norm {
+			font-size: 8px;
+		}
+	}
+
+	.table-item-price {
+		font-size: 13px;
+	}	
+	
+}
+
+/* ============== Корзина Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+
+	.basket-table {
+		margin-bottom: 20px;
+
+		td:first-child {
+			width: 130px;
+			padding-right: 15px;
+			box-sizing: border-box;
+		}
+
+		td:nth-child(2) {
+			width: 60px;
+		}
+
+	}
+
+	.table-item-desc {
+
+		img {
+			width: 39px;
+			height: 38px;
+			margin-right: 10px;
+		}
+
+		.table-item-title {
+			margin-bottom: 0;
+		}
+	}
+
+	.basket-button {
+		margin-bottom: 30px;
+	}
+
+}
+

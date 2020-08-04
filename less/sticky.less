@@ -1,0 +1,437 @@
+/* ============== Закрепленная шапка ============== */ 
+
+.sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	width: 100%;
+	height: 76px;
+	padding: 10px 0;
+	background: #1e2534;
+	box-sizing: border-box;
+	display: none;
+}
+
+.sticky-header .container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+}
+
+.logo-mini {
+	width: 45px;
+	height: 49px;
+	margin-right: 55px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.sticky-nav {
+	background: #1e2534;
+}
+
+
+.sticky-menu {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+	margin-right: 40px;
+	padding: 0;
+	list-style: none;
+	border-right: 1px solid #3b414e;
+
+	li a {
+		margin-right: 40px;
+		font-family: @second-font;
+		font-weight: 500;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		opacity: 0.7;
+	}
+}
+
+.sticky-button {
+	display: block;
+	width: 47px;
+	height: 47px;
+	margin-right: 50px;
+	background: #fff;
+	border-radius: 50%;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.sticky-button-user {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 12px;
+		left: 14px;
+		content: '';
+		display: block;
+		width: 19px; height: 21px;
+		background: url("../img/general-sprite.png") -50px -1882px;
+	}	
+}
+
+.sticky-button-search {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		content: '';
+		display: block;
+	    width: 17px; height: 18px;
+    	background: url("../img/general-sprite.png") -50px -1404px;
+	}
+}
+
+.sticky-search-container {
+	position: relative;
+}
+
+.sticky-search-input {
+	position: absolute;
+	right: 100%;
+	top: -15px;
+	z-index: 90;
+	width: 0;
+	opacity: 0;
+	border: none;
+}
+
+.sticky-search-input-toggle {
+	opacity: 1;
+	width: 250px;
+	padding: 5px;
+	border: 2px solid #e5e7e8;
+	transition: all 0.3s;
+}
+
+.sticky-button-cart {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 13px;
+		left: 13px;
+		content: '';
+		display: block;
+	    width: 21px; height: 21px;
+    	background: url("../img/general-sprite.png") -50px -1761px;	
+	}
+}
+
+.sticky-tablet-button {
+	display: none;
+}
+
+.sticky-burger {
+	display: none;
+}
+
+#sticky-checkbox {
+	display: none;
+}
+
+.sticky-button-phone {
+	display: none;
+}
+
+/* ============== Закрепленная шапка Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+
+	.sticky-header {
+		height: 51px;
+	}
+
+	.logo-mini {
+		width: 38px;
+		height: 43px;
+	}
+	
+	.sticky-nav {
+		display: none;
+	}
+
+	.sticky-tablet-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 257px;
+		margin-right: 43px;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		text-align: center;
+		font-family: @second-font;
+		font-weight: 500;
+		font-size: 12px;
+		color: #fff;
+		text-decoration: none;
+		background: #009c44;
+		box-sizing: border-box;
+
+		&:hover {
+			background: darken(#009c44, 5%);
+		}
+	}
+
+	.sticky-button {
+		flex-shrink: 0;
+		width: 34px;
+		height: 34px;
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 30px;
+		}
+	}
+
+	.sticky-button-user::before {
+		top: 9px;
+		left: 10px;
+		width: 14px; height: 15px;
+    	background: url("../img/general-sprite.png") -50px -1289px;
+	}
+
+	.sticky-button-search::before {
+		top: 11px;
+		left: 10px;
+	    width: 13px; height: 13px;
+	    background: url("../img/general-sprite.png") -50px -835px;
+	}
+
+	.sticky-button-cart::before {
+		top: 10px;
+		left: 10px;
+	    width: 15px; height: 15px;
+	    background: url("../img/general-sprite.png") -50px -1174px;
+	}		
+
+	.sticky-burger {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 116px;
+		height: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		box-sizing: border-box;
+		background: transparent;
+		border: none;
+		border-left: 1px solid #363c49;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		.sticky-burger-icon {
+			position: relative;
+			content: '';
+			flex-shrink: 0;
+			display: block;
+			width: 23px;
+			height: 2px;
+			margin-left: 29px;
+			margin-right: 23px;
+			background: #fff;			
+		}
+
+		.sticky-burger-icon::before,
+		.sticky-burger-icon::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 23px;
+			height: 2px;
+			background: #fff;
+		}
+
+		.sticky-burger-icon::before {
+			top: -4px;
+		}
+
+		.sticky-burger-icon::after {
+			top: 4px;
+		}
+
+		.sticky-burger-text {
+			font-family: @second-font;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 1;
+			color: #fff;
+
+		}
+	}
+
+	#sticky-checkbox:checked ~ .sticky-nav {
+		display: block;
+	}
+
+	#sticky-checkbox:checked ~ .sticky-burger .sticky-burger-icon {
+		background: transparent;
+	}
+
+	#sticky-checkbox:checked ~ .sticky-burger .sticky-burger-icon::before {
+		transform: rotate(45deg);
+		top: 0;
+	}
+
+	#sticky-checkbox:checked ~ .sticky-burger .sticky-burger-icon::after {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+
+	.sticky-nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: translateY(100%);
+
+
+		.sticky-menu {
+			flex-direction: column;
+			margin-right: 0;
+			border: none;
+		}
+
+		.sticky-menu li {
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid #363c49;
+		}
+
+		.sticky-menu li a {
+			display: block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 20px;
+		}
+
+	}
+}
+
+/* ============== Закрепленная шапка Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+
+	.sticky-tablet-button {
+		display: none;
+	}
+
+	.sticky-header {
+		padding: 8px 0;
+	}
+
+	.sticky-header .container {
+		justify-content: space-around;
+	}
+
+	.logo-mini {
+		flex-shrink: 0;
+		order: 3;
+		margin-right: 30px;
+	}
+
+	.sticky-button {
+		width: 27px;
+		height: 27px;
+		margin-right: 30px;
+	}
+
+	.sticky-button-search {
+		display: none;
+	}
+
+	.sticky-button-phone {
+		position: relative;
+		display: block;
+		order: 1;
+
+		&::before {
+			position: absolute;
+			top: 7px;
+			left: 8px;
+			content: '';
+			display: block;
+			width: 11px; height: 13px;
+		    background: url("../img/general-sprite.png") -50px -722px;			
+		}
+	}
+
+	.sticky-button-user {
+		order: 2;
+
+		&::before {
+			top: 6px;
+			left: 8px;
+		    width: 11px; height: 12px;
+    		background: url("../img/general-sprite.png") -50px -384px;
+		}
+	}
+
+	.sticky-button-cart {
+		order: 4;
+
+		&::before {
+			top: 7px;
+			left: 8px;
+			width: 12px; height: 12px;
+    		background: url("../img/general-sprite.png") -50px -272px;
+		}
+	}
+
+	.sticky-burger {
+		position: relative;
+		flex-shrink: 0;
+		order: 5;
+		display: block;
+		content: '';
+		width: 27px;
+		height: 27px;
+		padding: 0;
+		background: #fff;
+		border: none;
+		border-radius: 50%;
+
+		span {
+			display: none;
+		}
+
+		.sticky-burger-icon {
+			top: 13px;
+			left: 6px;
+			width: 15px;
+			height: 2px;
+			margin: 0;
+			background: #009846;
+
+			&::before,
+			&::after {
+				width: 15px;
+				height: 2px;
+				background: #009846;
+			}
+		}
+	}
+
+}

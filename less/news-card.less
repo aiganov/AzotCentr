@@ -1,0 +1,88 @@
+/* ============== Карточка-Новости ============== */ 
+
+.article img {
+	display: block;
+	width: 770px;
+	height: 305px;
+	margin-bottom: 40px;
+	border-radius: 4px;
+	object-fit: cover;
+}
+
+.article p,
+main > p {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #000;
+}
+
+.article h2 {
+	margin: 0;
+	margin-top: 55px;
+	margin-bottom: 30px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1;
+	color: #24407e;
+	text-transform: uppercase;
+}
+
+.latest-news {
+	margin-top: 45px;
+	padding-top: 50px;
+	border-top: 1px solid #e8edf5;
+}
+
+/* ============== Карточка-Новости Планшет ============== */ 
+
+@media screen and (max-width: 1200px) {
+	
+	.article img {
+		width: 466px;
+		height: 223px;
+		margin-bottom: 30px;
+	}
+
+	.article p,
+	main > p {
+		font-size: 9px;
+		line-height: 14px;
+	}
+
+
+	.article h2 {
+		margin-top: 25px;
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	.latest-news {
+		margin-top: 40px;
+		padding-top: 40px;
+	}
+
+}
+
+/* ============== Карточка-Новости Мобильные ============== */ 
+
+@media screen and (max-width: 750px) {
+
+	.article img {
+		width: 298px;
+		height: 196px;
+		margin-bottom: 25px;
+	}	
+
+	.article h2 {
+		margin-top: 40px;
+		margin-bottom: 25px;
+	}
+
+	.latest-news {
+		margin-top: 25px;
+		padding-top: 25px;
+	}
+
+}
