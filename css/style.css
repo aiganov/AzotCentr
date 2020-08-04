@@ -893,6 +893,9 @@ main > h1 {
   .main-nav {
     width: 100%;
   }
+  .main-menu li:last-child {
+    flex-grow: 0;
+  }
   .main-menu li a {
     min-width: 110px;
     padding: 12px 0;
